@@ -16,6 +16,10 @@ public class MapDemo {
         q1.setQuestionId(1211);
         q1.setQuestion("What is Java?");
 
+        Question q2 = new Question();
+        q2.setQuestionId(1222);
+        q2.setQuestion("What is Hibernate?");
+
         /*********************************************
          * Creating an answer for the above question *
          *********************************************/
@@ -23,6 +27,11 @@ public class MapDemo {
         answer1.setAnswerId(121);
         answer1.setAnswer("Java is a programming Language");
         q1.setAnswer(answer1);
+
+        Answer answer2 = new Answer();
+        answer2.setAnswerId(122);
+        answer2.setAnswer("Hibernate is a Java Framework used Object Relational Mapping");
+        q2.setAnswer(answer2);
 
         /**************************
          * Session Creation Start *
@@ -34,6 +43,7 @@ public class MapDemo {
          * Save the record in the database *
          ***********************************/
         session.persist(q1);
+        session.persist(q2);
         /************************
          * Session Creation End *
          ************************/
