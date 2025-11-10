@@ -1,8 +1,7 @@
 package org.map;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import org.hibernate.engine.internal.Cascade;
 
 @Entity
 public class Question {
@@ -10,6 +9,12 @@ public class Question {
     @Column(name = "question_id")
     private int questionId;
     private String question;
+
+    /*****************************
+     * Creating a One to One Map *
+     *****************************/
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "a_id")
     private Answer answer;
 
     public Question() {
