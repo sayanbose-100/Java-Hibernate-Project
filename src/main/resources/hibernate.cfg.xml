@@ -12,10 +12,10 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-        <mapping class="org.hibernatetut.Student" />
-        <mapping class="org.hibernatetut.Address" />
-        <mapping class="org.map.Question" />
-        <mapping class="org.map.Answer" />
+<!--        <mapping class="org.hibernatetut.Student" />-->
+<!--        <mapping class="org.hibernatetut.Address" />-->
+<!--        <mapping class="org.map.Question" />-->
+<!--        <mapping class="org.map.Answer" />-->
         <mapping class="org.map.Courses" />
         <mapping class="org.map.Streams" />
     </session-factory>
